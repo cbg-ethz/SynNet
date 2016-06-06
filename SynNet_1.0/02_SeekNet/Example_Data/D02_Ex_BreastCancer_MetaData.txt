@@ -1,0 +1,200 @@
+# This is how you make comments!					
+# Do not leave empty lines without the comment marker, #, in the beginning!					
+#					
+# The file is tab-separated, you can edit it in Excel and save it back as tab-separated for convenience.					
+# There are two mandatory and one optional columns, UniqueID, and AnnotationID are mandatory, and SampleName, and SampleNameDetail are optional, if they exists they will be used in the results to make them easy readable.					
+# The column called UniqueID is the primary key connecting this metadata to the corresponding data file.					
+# The column called AnnotationID is the basis for classification. The annotations are by natural numbers: Zero is the control/healthy sample. and all positive integers are considered separately as a group, so for example if there are 4 samples annotated as 2, they will be all compared together vs. all 0-annotated samples. Negative numbers are excluded from the analysis.					
+# Any other extra columns can be added in this file, they will be kept throughout the analysis in case one wants to return to them afterwards but they wont affect the analysis.					
+#					
+# UniqueID	AnnotationID	SampleName	Histological type	Histological grade	Molecular subtypes Spearman_probe averages_ cut-off<0.1
+UniqueID	AnnotationID	SampleName	SampleNameDetail	Histological grade	Molecular subtypes Spearman_probe averages_ cut-off<0.1
+1	-3	Br. Cancer Her2+	DCIS	poor	Her2
+2	-3	Br. Cancer Her2+	DCIS	poor	Her2
+3	-3	Br. Cancer Her2+	DCIS	moderate	Basal
+4	-3	Br. Cancer Her2+	DCIS	poor	Normal
+5	-3	Br. Cancer Her2+	DCIS	poor	LumB
+6	-3	Br. Cancer Her2+	DCIS	poor	Basal
+7	-3	Br. Cancer Her2+	DCIS	poor	Normal
+8	-3	Br. Cancer Her2+	DCIS	poor	LumA
+9	-3	Br. Cancer Her2+	DCIS	poor	Normal
+10	-100	Br. Cancer	DCIS	poor	Basal
+11	-3	Br. Cancer Her2+	DCIS	moderate	Normal
+12	-3	Br. Cancer Her2+	DCIS	moderate	LumA
+13	-100	Br. Cancer	DCIS	poor	NA
+14	-3	Br. Cancer Her2+	DCIS	poor	Her2
+15	-3	Br. Cancer Her2+	DCIS	poor	LumA
+16	-3	Br. Cancer Her2+	DCIS	poor	LumA
+17	-3	Br. Cancer Her2+	DCIS	poor	Normal
+18	-3	Br. Cancer Her2+	DCIS	poor	Her2
+19	4	Br. Cancer ER+ Her-	IDC	poor	NA
+20	4	Br. Cancer ER+ Her-	IDC	moderate	NA
+21	-3	Br. Cancer Her2+	IDC	poor	NA
+22	4	Br. Cancer ER+ Her-	IDC	poor	LumB
+23	4	Br. Cancer ER+ Her-	IDC	moderate	LumA
+24	4	Br. Cancer ER+ Her-	IDC	moderate	NA
+25	-3	Br. Cancer Her2+	IDC	moderate	NA
+26	4	Br. Cancer ER+ Her-	Mucinous A	good	LumA
+27	-3	Br. Cancer Her2+	IDC	moderate	NA
+28	-3	Br. Cancer Her2+	IDC	poor	<0.1
+29	4	Br. Cancer ER+ Her-	IDC	good	LumA
+30	4	Br. Cancer ER+ Her-	IDC	moderate	LumA
+31	4	Br. Cancer ER+ Her-	IDC	good	LumA
+32	4	Br. Cancer ER+ Her-	IDC	good	LumA
+33	4	Br. Cancer ER+ Her-	IDC	poor	LumA
+34	4	Br. Cancer ER+ Her-	IDC	moderate	LumA
+35	4	Br. Cancer ER+ Her-	IDC	poor	LumA
+36	4	Br. Cancer ER+ Her-	IDC	poor	LumB
+37	4	Br. Cancer ER+ Her-	IDC	good	NA
+38	4	Br. Cancer ER+ Her-	IDC	poor	NA
+39	4	Br. Cancer ER+ Her-	IDC	good	NA
+40	4	Br. Cancer ER+ Her-	ILC	moderate	NA
+41	-3	Br. Cancer Her2+	IDC	poor	NA
+42	4	Br. Cancer ER+ Her-	IDC	good	LumA
+43	4	Br. Cancer ER+ Her-	IDC	good	NA
+44	4	Br. Cancer ER+ Her-	IDC	moderate	LumA
+45	-3	Br. Cancer Her2+	IDC	poor	Her2
+46	-3	Br. Cancer Her2+	IDC	poor	Basal
+47	-3	Br. Cancer Her2+	IDC	moderate	LumA
+48	-3	Br. Cancer Her2+	IDC	poor	LumB
+49	-3	Br. Cancer Her2+	IDC	poor	LumA
+50	-3	Br. Cancer Her2+	IDC	poor	LumA
+51	-3	Br. Cancer Her2+	IDC	poor	LumA
+52	-3	Br. Cancer Her2+	IDC	poor	LumA
+53	-3	Br. Cancer Her2+	IDC	moderate	LumA
+54	-3	Br. Cancer Her2+	IDC	poor	Her2
+55	-3	Br. Cancer Her2+	IDC	moderate	LumA
+56	-3	Br. Cancer Her2+	IDC	poor	Her2
+57	-3	Br. Cancer Her2+	IDC	moderate	Her2
+58	-3	Br. Cancer Her2+	IDC	poor	Basal
+59	-3	Br. Cancer Her2+	IDC	moderate	Basal
+60	-3	Br. Cancer Her2+	IDC	moderate	LumB
+61	-3	Br. Cancer Her2+	IDC	moderate	LumA
+62	-3	Br. Cancer Her2+	IDC	moderate	LumA
+63	-3	Br. Cancer Her2+	IDC	poor	<0.1
+64	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+65	-3	Br. Cancer Her2+	IDC	poor	Her2
+66	-3	Br. Cancer Her2+	IDC	poor	Basal
+67	-3	Br. Cancer Her2+	IDC	poor	Her2
+68	-3	Br. Cancer Her2+	IDC	poor	Her2
+69	-3	Br. Cancer Her2+	IDC	poor	LumA
+70	-3	Br. Cancer Her2+	IDC	poor	Her2
+71	-3	Br. Cancer Her2+	IDC	poor	Basal
+72	-3	Br. Cancer Her2+	IDC	poor	Basal
+73	-3	Br. Cancer Her2+	IDC	poor	Her2
+74	-3	Br. Cancer Her2+	IDC	poor	Her2
+75	-3	Br. Cancer Her2+	IDC	poor	Her2
+76	-3	Br. Cancer Her2+	IDC	moderate	<0.1
+77	-3	Br. Cancer Her2+	IDC	poor	Basal
+78	-3	Br. Cancer Her2+	IDC	poor	Basal
+79	-3	Br. Cancer Her2+	IDC	poor	Her2
+80	-3	Br. Cancer Her2+	IDC	moderate	<0.1
+81	-3	Br. Cancer Her2+	IDC	poor	Normal
+82	-3	Br. Cancer Her2+	IDC	poor	Basal
+83	-3	Br. Cancer Her2+	IDC	poor	<0.1
+84	-3	Br. Cancer Her2+	IDC	poor	Her2
+85	-3	Br. Cancer Her2+	IDC	poor	Her2
+86	-3	Br. Cancer Her2+	IDC	poor	Her2
+87	-3	Br. Cancer Her2+	IDC	poor	Her2
+88	-3	Br. Cancer Her2+	IDC	poor	Basal
+89	-3	Br. Cancer Her2+	IDC	poor	Her2
+90	-3	Br. Cancer Her2+	IDC	poor	Basal
+91	-100	Br. Cancer	IDC	poor	NA
+92	-3	Br. Cancer Her2+	IDC	poor	Her2
+93	-3	Br. Cancer Her2+	IDC	poor	Basal
+94	-3	Br. Cancer Her2+	IDC	moderate	LumB
+95	0	Normal	Normal	NA	Normal
+96	0	Normal	Normal	NA	Normal
+97	0	Normal	Normal	NA	Normal
+98	0	Normal	Normal	NA	Normal
+99	0	Normal	Normal	NA	Normal
+100	0	Normal	Normal	NA	Normal
+101	0	Normal	Normal	NA	Normal
+102	0	Normal	Normal	NA	Normal
+103	0	Normal	Normal	NA	Normal
+104	0	Normal	Normal	NA	Normal
+105	0	Normal	Normal	NA	Normal
+106	-2	Br. Cancer Triple-	IDC	poor	Basal
+107	-2	Br. Cancer Triple-	IDC	poor	Basal
+108	-2	Br. Cancer Triple-	IDC	poor	Basal
+109	-2	Br. Cancer Triple-	IDC	poor	<0.1
+110	-2	Br. Cancer Triple-	IDC	poor	<0.1
+111	-2	Br. Cancer Triple-	IDC	poor	Basal
+112	-2	Br. Cancer Triple-	IDC	poor	Basal
+113	-2	Br. Cancer Triple-	IDC	poor	Basal
+114	-2	Br. Cancer Triple-	IDC	poor	Basal
+115	-2	Br. Cancer Triple-	IDC	poor	Basal
+116	-2	Br. Cancer Triple-	IDC	poor	Basal
+117	-2	Br. Cancer Triple-	Apocrine	poor	Basal
+118	-2	Br. Cancer Triple-	IDC	poor	Basal
+119	-2	Br. Cancer Triple-	IDC	poor	Basal
+120	-2	Br. Cancer Triple-	IDC	poor	Basal
+121	-2	Br. Cancer Triple-	IDC	poor	Basal
+122	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+123	-2	Br. Cancer Triple-	IDC	poor	Basal
+124	-2	Br. Cancer Triple-	IDC	poor	Basal
+125	-3	Br. Cancer Her2+	IDC	moderate	Basal
+126	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+127	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+128	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+129	-2	Br. Cancer Triple-	Metaplastic	poor	Normal
+130	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+131	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+132	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+133	-100	Br. Cancer Triple-	ILC	moderate	NA
+134	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+135	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+136	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+137	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+138	-2	Br. Cancer Triple-	Adenoid	good	Normal
+139	-2	Br. Cancer Triple-	IDC	poor	Basal
+140	-3	Br. Cancer Her2+	IDC	poor	NA
+141	-2	Br. Cancer Triple-	Atypical Medullary	poor	Basal
+142	-3	Br. Cancer Her2+	IDC	poor	NA
+143	-3	Br. Cancer Her2+	IDC	poor	NA
+144	-3	Br. Cancer Her2+	IDC	poor	NA
+145	-3	Br. Cancer Her2+	IDC	moderate	NA
+146	-2	Br. Cancer Triple-	IDC	poor	Basal
+147	-2	Br. Cancer Triple-	IDC	poor	Basal
+148	-2	Br. Cancer Triple-	IDC	poor	Basal
+149	-2	Br. Cancer Triple-	Apocrine	poor	Normal
+150	-2	Br. Cancer Triple-	IDC	poor	Basal
+151	-100	Br. Cancer Triple-	IDC	poor	NA
+152	-2	Br. Cancer Triple-	IDC	poor	Basal
+153	-2	Br. Cancer Triple-	IDC	poor	Basal
+154	-2	Br. Cancer Triple-	IDC	poor	Basal
+155	-2	Br. Cancer Triple-	IDC	poor	Basal
+156	-2	Br. Cancer Triple-	IDC	poor	Basal
+157	-2	Br. Cancer Triple-	IDC	poor	Basal
+158	-2	Br. Cancer Triple-	IDC	poor	Basal
+159	-2	Br. Cancer Triple-	IDC	poor	Basal
+160	-2	Br. Cancer Triple-	Apocrine	poor	Basal
+161	-2	Br. Cancer Triple-	IDC	poor	Basal
+162	-2	Br. Cancer Triple-	IDC	poor	Basal
+163	-2	Br. Cancer Triple-	IDC	poor	Basal
+164	-2	Br. Cancer Triple-	IDC	poor	Basal
+165	-2	Br. Cancer Triple-	IDC	poor	Basal
+166	-2	Br. Cancer Triple-	Metaplastic	poor	Basal
+167	-2	Br. Cancer Triple-	IDC	poor	Basal
+168	-2	Br. Cancer Triple-	IDC	poor	Basal
+169	-2	Br. Cancer Triple-	IDC	poor	Basal
+170	-2	Br. Cancer Triple-	Apocrine	moderate	<0.1
+171	-2	Br. Cancer Triple-	Adenoid	good	Normal
+172	-2	Br. Cancer Triple-	IDC	poor	Basal
+173	-2	Br. Cancer Triple-	IDC	poor	Her2
+174	-2	Br. Cancer Triple-	Metaplastic	moderate	Basal
+175	-2	Br. Cancer Triple-	IDC	poor	Basal
+176	-2	Br. Cancer Triple-	IDC	poor	Basal
+177	-2	Br. Cancer Triple-	IDC	poor	Basal
+178	-2	Br. Cancer Triple-	IDC	poor	Basal
+179	-2	Br. Cancer Triple-	IDC	poor	Basal
+180	-2	Br. Cancer Triple-	IDC	poor	Basal
+181	-2	Br. Cancer Triple-	IDC	poor	Basal
+182	-2	Br. Cancer Triple-	IDC	poor	Basal
+183	-2	Br. Cancer Triple-	Metaplastic	poor	NA
+192	5	Br. Cancer Cell Line	Cell Line	NA	NA
+193	5	Br. Cancer Cell Line	Cell Line	NA	NA
+194	5	Br. Cancer Cell Line	Cell Line	NA	NA
+195	5	Br. Cancer Cell Line	Cell Line	NA	NA
+196	5	Br. Cancer Cell Line	Cell Line	NA	NA
+197	5	Br. Cancer Cell Line	Cell Line	NA	NA

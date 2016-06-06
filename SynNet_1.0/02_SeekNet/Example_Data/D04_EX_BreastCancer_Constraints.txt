@@ -1,0 +1,53 @@
+# This is how you make comments!
+# Use TAB to separate the constraint name from it's value, and also from Comments, the order of the lines does not matter. If you delete some line, software would use a default value, or raise an error depending the case.
+# Make sure there are not extra Tabs in the file.
+# ------------------------------
+
+# General Configurations
+AnalysisMode	c	# [C/B]  # This chooses between the two different modes of analysis: "C"(Continuous) or "B"(Binary).
+Plotting	on	# [Off/On(default)] # Setting this to 'off' deactivates plotting throughout the program, any other value would be considered as 'on'. 
+DataPath	Example_Data/D01_Ex_BreastCancer_Data.txt	# This is the path to the data file, is left empty the program will switch to Simulation mode.
+MetaDataPath	Example_Data/D02_Ex_BreastCancer_MetaData.txt	# This is the path to the metadata file, is left empty the program will switch to Simulation mode.
+Mature_miRNAs	Example_Data/D03_Ex_BreastCancer_miRNAs.fa	# (optional) multi FASTA File containing mature miRNA sequences and names, if provided similarity between miRNA sequences will be accounted for.
+MiRNAs_Blacklist	Example_Data/D05_EX_BreastCancer_miRNAs_Blacklist.txt	# (optional, you can leave it empty or delete the line) A text File containing the name of mature miRNAs that should be excluded from Circuit searching
+
+# General Circuit Constraints. These are used when learning circuits (also in simulation mode for synthesising circuits)
+MaxAnd	6	# Maximum number of inputs to the AND gate
+MaxOr	3	# Maximum number of inputs to an OR gate
+MaxOrCount	2	# Maximum number of OR gates in a circuit
+MaxNotCount	4	# Maximum number of NOT gates in a circuit
+MaxCircuitSize	10	# Maximum number of inputs in a circuit. 
+
+# General Expression Constraints
+Total_miRNAs_perCell	25000	# The total miRNA library size is normalised to fall around this number, 25000 is the default value.
+Quantizer_Threshold	250	# After normalisation for the pool size
+Max_Seed_Similatiry	0	# miRNAs with seeds less or equal to this number different from each other with be combined.
+Expression_Pseudocount	1	# This is a pseudo-count expression added after normalisation for library size and Total_miRNAs_perCell and summing over those under Max_Seed_Similatiry
+
+# Continuous Mode Parameters (copies/cell):  Circuit Constants, if you don’t know these read the paper, if you do but you do not have values for them, 
+# or you want to use the software for another technology, change the “AnalysisMode” option to “b” to have a general optimisation. 
+Continuous_Circuit_F1C	20
+Continuous_Circuit_F2C	10251
+Continuous_Circuit_Tmax	9755
+Continuous_Circuit_FF4max	3000
+Continuous_Circuit_OUTmax	50000
+
+# Learning Constraints
+Learning_MaxOptimizationRounds	100000
+Learning_Convergence_Thr_1	100	# (Recommended: 1000 for analysis, and 100 for quick checkups) Convergence Threshold if performance (AUC) is less than 100%
+Learning_Convergence_Thr_2	50	# (Recommended: 500 for analysis, and 50 for quick checkups) Convergence Threshold if performance (AUC) is already 100% for further optimisation of margins
+Learning_MaxHitsToReport	1	# Number of best-performing circuits to report.
+Learning_Avrage_Margin_Weight	1	# Relative weight of the Average and Worst classification margins
+Learning_Worst_Margin_Weight	1	# Relative weight of the Average and Worst classification margins
+Learning_MaxPoolRatio	2	# (Recommended: 2) The number of maximum size of circuits tested simultaneously in each round as a ratio to the number of genes in the data.
+Learning_mRT_log2	0.01	# (Recommended: 0.01-0.1) mRT(minimum Response Threshold in log2), this is only for specific mode. Genes that fail to produce a response of this much will be excluded from analysis. This is evaluated by feeding minimum and maximum expression of a gene in a Literal/Negated literal function. One can use larger larger thresholds to only include genes with huge variation in their expression, and also gain speed, but this  will also lead to a lower sensitivity in finding circuits due to discarding too many genes from the data.
+Learning_Pruning	on	# [Off/On(default)] # Setting this to 'off' deactivates pruning, any other value would be considered as 'on'. 
+Learning_CrossValidation	off	# If On the analysis will be run 3 extra time to evaluate generalisation error. Turn this off for quick analyses
+
+# Simulation Constraints (Irrelevant for learning circuits, if there's no data provided to the software in “DataPath”, it will switch to simulation mode)
+Simulation_Rounds	500	# Total number of simulations, a positive integer.
+Simulation_Min_Genes	10
+Simulation_Max_Genes	500
+Simulation_Min_Samples	5
+Simulation_Max_Samples	250
+Simulation_NotRate	0.5	# Change this if it takes too many tries to make a valid synthetic network. Expected frequency of NOTs within singular AND inputs in random function production

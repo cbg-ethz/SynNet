@@ -1,0 +1,2 @@
+rsync -a /Users/pejmanm/Dropbox/PEJ_Lib_Dropbox/ pejmanm@bs-beerenwinkel02:~/bewi/PEJ_Lib_Server/
+rsync -a /Users/pejmanm/Dropbox/PEJ_Lib_Dropbox/ pmohammadi@pennstation:/nethome/pmohammadi/PejGroup/PejLib/
