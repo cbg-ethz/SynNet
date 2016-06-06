@@ -7,7 +7,7 @@ This package includes two main components: *01_Optimize_Paramters* and *02_SeekN
 ## 01_Optimize_Paramters
 This package can be used to optimize circuit biochemical paramters using on-off ratio for a set of given circuits. 
 
-You can run it by enterin the folder and running ```Launch_Global_Optimization.m```. This is tested on Matlab 2015. All parameters are set in ```Launch_Global_Optimization.m``` file, you can edit the file to change your choice of circuits, optimization parameters ranges, binarization point and other things. Advanced users can change the circuit evaluation functions in ```Auxilary_Functions``` folder to apply this software to other in-situ classification technologies with a different biochemical transfer function.
+You can run it by enterin the folder and running ```Launch_Global_Optimization.m```. This is tested on Matlab 2015. All parameters are set in ```Launch_Global_Optimization.m``` file, you can edit the file to change your choice of circuits, optimization parameters ranges, binarization point, input expression distributions, and other things. Advanced users can change the circuit evaluation functions in ```Auxilary_Functions``` folder to apply this software to other in-situ classification technologies with a different biochemical transfer function.
 
 ## 02_SeekNet
 This package can be used to learn classifier circuit for a given dataset for a specific technology given fixed biochemical paramters (continuous mode), or using the general optimization strategy for any boolean-like circuit technology (boolean mode).
@@ -15,7 +15,7 @@ This package can be used to learn classifier circuit for a given dataset for a s
 
 You can run an example case provided by running: ```Seek_Net('Example_Data/D04_EX_BreastCancer_Constraints.txt')```
 
-Input: The example data includes 3 mandatory (Expresion data, Annotation metadata, and analysis Constraints) and 2 optional input files (mature miRNA sequences, and blacklisted miRNAs to be excluded). 
+Input: The example data includes three mandatory (Expresion data, Annotation metadata, and analysis Constraints) and two optional input files (mature miRNA sequences, and blacklisted miRNAs to be excluded). 
 
 NOTE: There's one MEX file, fastAUC, used in this package which is precompiled for 64bit mac, you might need to recompile it for your computer, check ```02_SeekNet/Auxilary_Functions/fastAUC/install.m``` to learn how to do so.
 
